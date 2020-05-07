@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1564" started-at="2020-05-06T20:03:46 CDT" finished-at="2020-05-06T20:03:48 CDT">
+  <suite name="Default suite" duration-ms="1507" started-at="2020-05-07T13:54:15 CDT" finished-at="2020-05-07T13:54:17 CDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1564" started-at="2020-05-06T20:03:46 CDT" finished-at="2020-05-06T20:03:48 CDT">
+    <test name="Default test" duration-ms="1507" started-at="2020-05-07T13:54:15 CDT" finished-at="2020-05-07T13:54:17 CDT">
       <class name="tests.AirlineTest">
-        <test-method status="PASS" signature="getReservation()[pri:0, instance:tests.AirlineTest@1b68ddbd]" name="getReservation" duration-ms="1537" started-at="2020-05-06T20:03:46 CDT" finished-at="2020-05-06T20:03:48 CDT">
+        <test-method status="PASS" signature="newFlight()[pri:0, instance:tests.AirlineTest@1b68ddbd]" name="newFlight" duration-ms="1477" started-at="2020-05-07T13:54:15 CDT" finished-at="2020-05-07T13:54:17 CDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getReservation -->
+        </test-method> <!-- newFlight -->
       </class> <!-- tests.AirlineTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

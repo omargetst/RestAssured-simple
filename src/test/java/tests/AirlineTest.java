@@ -1,9 +1,8 @@
 package tests;
-
 import org.testng.annotations.Test;
-
-
-
+import Pojo.Flight;
+import Pojo.FlightInformation;
+import Pojo.Reservation;
 import static org.hamcrest.Matchers.equalTo;
 import static io.restassured.RestAssured.given;
 
@@ -11,19 +10,16 @@ public class AirlineTest {
 
 	@Test
 	public void newFlight() {
+		FlightInformation respuesta =
 		given()
 			.header("Content-Type", "application/json")
-			.body("{\n" +
-			        "  \"origin\": \"Brujas\",\n" +
-			        "  \"destination\": \"Mexico\",\n" +
-			        "  \"duration\": \"369\"\n" +	
-			        "}")
+			.body(new Flight("Irlanda", "Amsterdam", 350))
 		.when()
 			.post ("http://localhost:5000/api/flight/new") 
-
 		.then()
-			.statusCode(200);
-		
+			.statusCode(200)
+			.extract().body().as(FlightInformation.class);		
+		System.out.println(respuesta);
 	}
 	
 	@Test
@@ -47,10 +43,7 @@ public class AirlineTest {
 		Integer resp=
 		given()
 			.header("Content-Type", "application/json")
-			.body("{\n" +
-			        "  \"flight_id\": \"3\",\n" +
-			        "  \"name\": \"Adry\"\n" +			        
-			        "}")
+			.body(new Reservation("Irene", 4))
 		.when()
 			.post ("http://localhost:5000/api/reservation/new")			
 		.then()
